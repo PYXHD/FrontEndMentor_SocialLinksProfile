@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-Regular.ttf);
+}
+:root {
+  --color1: #1f1f1f; /*card background*/
+  --color2: #333333; /*btn background*/
+  --color3: #c4f82a; /*accent-color*/
+  --color4: white; /*text-color*/
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: rgb(14, 14, 14);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  color: var(--color4);
+}
+.card {
+  display: grid;
+  grid-template-rows: 45% 55%;
+  background: var(--color1);
+  border-radius: 10px;
+  height: 70%;
+  max-height: 600px;
+  width: 85%;
+  max-width: 350px;
+  padding: 15px 0;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+.profile-container img {
+  height: 80px;
+  border-radius: 40px;
+}
+h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+}
+h2 {
+  font-size: 0.8rem;
+  color: var(--color3);
+}
+.profile-container p {
+  font-size: 0.8rem;
+}
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: 45px;
+  background: var(--color2);
+  border: none;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color4);
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.15s ease-in-out;
+}
+.btn:hover {
+  background: var(--color3);
+  color: var(--color1);
+  transform: scale(1.02);
+}
+.attribution {
+  position: absolute;
+  bottom: 10px;
+}
+.attribution * {
+  color: var(--color4);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
