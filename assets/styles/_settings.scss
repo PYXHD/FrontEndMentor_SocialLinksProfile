@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Regular.ttf);
+}
+
+$font: Inter, sans-serif;
+
+$colorBodyBg: rgb(20, 20, 20);
+$colorCardBg: rgb(31, 31, 31); /*card background*/
+$colorBtnBg: rgb(51, 51, 51); /*btn background*/
+$colorAccent: rgb(197, 248, 42); /*accent-color*/
+$colorText: white; /*text-color*/
+
+@mixin font($f-size, $f-weight, $f-color) {
+  font-family: $font;
+  font-size: $f-size;
+  font-weight: $f-weight;
+  color: $f-color;
+}
+
+html {
+  font-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $colorBodyBg;
+}

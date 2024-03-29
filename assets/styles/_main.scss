@@ -1,0 +1,79 @@
+main {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card-container {
+    height: 574px;
+    width: 360px;
+    display: grid;
+    grid-template-rows: 46% 54%;
+    background-color: $colorCardBg;
+    border-radius: 10px;
+    padding: 35px;
+
+    @media screen and (max-width: "425px") {
+      margin: auto 25px;
+    }
+
+    .profile-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 27px;
+
+      .img {
+        width: 83px;
+        border-radius: 40px;
+      }
+
+      .identity {
+        line-height: 34px;
+        h1 {
+          @include font(1.65rem, 400, $colorText);
+          margin-top: 5px;
+        }
+        h2 {
+          @include font(0.975rem, 400, $colorAccent);
+        }
+      }
+
+      .description {
+        @include font(0.85rem, 400, $colorText);
+        letter-spacing: 0.6px;
+      }
+    }
+
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .btn {
+        width: 100%;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: $colorBtnBg;
+        border-radius: 10px;
+        @include font(0.9rem, 600, $colorText);
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        transition: 0.1s ease;
+
+        &:hover {
+          background: $colorAccent;
+          color: $colorBodyBg;
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+}
